@@ -31,7 +31,7 @@ def listar():
     for user in users:
         user = {
             'id': user['id'],
-            'titulo': user['title']
+            'title': user['title']
         }
         normalized_users.append(user)
 
