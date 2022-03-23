@@ -3,6 +3,7 @@ import requests
 import json
 import logging
 import basic_auth
+from utility import normalized_details
 
 app = Flask(__name__)
 
@@ -18,18 +19,11 @@ def listar():
     try:
         details = json.loads(response.content)[:int(limit)]
         
-        normalized_details = []
+        normalized_details(details)
 
-        for data in details:
-            data = {
-                'id': data['id'],
-                'title': data['title']
-            }
-            normalized_details.append(data)
+        app.logger.info('Response: ' + json.dumps(normalized_details(details)))
 
-        app.logger.info('Response: ' + json.dumps(normalized_details))
-
-        return jsonify(normalized_details)
+        return jsonify(normalized_details(details))
     
     except ValueError:
         return jsonify({
