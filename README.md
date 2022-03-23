@@ -58,13 +58,13 @@ Os itens nesta sessão não são obrigatórios, porém contarão como pontos ext
 
 ## Como rodar esse projeto
 
-'''sh
+```sh
 export FLASK_APP=api\\app.py
 export FLASK_ENV=Development
 export FLASK_DEBUG=True
 
 flask run
-'''
+```
 
 ## Fazendo requisições no postman
 
