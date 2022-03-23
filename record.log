@@ -1,6 +1,6 @@
-2022-03-23 12:44:37,237 :  * Detected change in 'C:\\Users\\AndreDev\\Desafio-InovaMind\\api\\utility.py', reloading
-2022-03-23 12:44:37,339 :  * Restarting with stat
-2022-03-23 12:44:38,102 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
-2022-03-23 12:44:39,156 :  * Detected change in 'C:\\Users\\AndreDev\\Desafio-InovaMind\\api\\utility.py', reloading
-2022-03-23 12:44:39,264 :  * Restarting with stat
-2022-03-23 12:44:40,088 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-23 17:40:21,516 :  * Detected change in 'C:\\Users\\AndreDev\\Desafio-InovaMind\\api\\utility.py', reloading
+2022-03-23 17:40:21,611 :  * Restarting with stat
+2022-03-23 17:40:26,593 :  * Restarting with stat
+2022-03-23 17:40:27,307 :  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+2022-03-23 17:40:29,413 :  * Detected change in 'C:\\Users\\AndreDev\\Desafio-InovaMind\\api\\app.py', reloading
+2022-03-23 17:40:29,618 :  * Restarting with stat

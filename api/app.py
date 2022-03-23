@@ -3,9 +3,17 @@ import requests
 import json
 import logging
 import basic_auth
-from utility import normalized_details
+from utility import normalized_details, validate_limit
 
 app = Flask(__name__)
+
+@app.errorhandler(404)
+def page_not_found(error):
+    return jsonify({
+                    "error": {
+                    "reason": "Route not found.",
+                    }
+                }), 404
 
 logging.basicConfig(filename='record.log', level=logging.INFO, format=f'%(asctime)s : %(message)s')
 
@@ -14,6 +22,8 @@ logging.basicConfig(filename='record.log', level=logging.INFO, format=f'%(asctim
 def listar():
     limit = request.args.get('limit', 5)
     
+    validate_limit(limit)
+
     url = 'https://jsonplaceholder.typicode.com/todos'
     response = requests.get(url)
     try:
@@ -28,6 +38,6 @@ def listar():
     except ValueError:
         return jsonify({
                     "error": {
-                    "reason": "Filtro inválido ou valor do filtro não numérico.",
+                    "reason": "Invalid filter or ivalid value",
                     }
-                }), 404
+                }), 500

@@ -1,3 +1,4 @@
+from flask import jsonify
 
 def normalized_details(details):
     normalized_details = []
@@ -10,3 +11,13 @@ def normalized_details(details):
         normalized_details.append(data)
 
     return normalized_details
+
+def validate_limit(limit):
+    if limit is None:
+        return jsonify({
+                    "error": {
+                    "reason": "Invalid filter or ivalid value",
+                    }
+                }), 500
+    else:
+        pass
