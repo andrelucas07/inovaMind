@@ -68,23 +68,22 @@ flask run
 
 ## Fazendo requisições no postman
 
-'''
 **No diretório: "request_postman"**
-
+```
 1 - Acessar o arquivo inovaMind.postman
 2 - Copiar todo o conteudo
-
+```
 **No postman:**
-
+```
 1 - Clicar em "Import"
 2 - Escolher a opção Raw Text
 3 - Colar todo conteudo que foi copiado do arquivo inovaMind.postman
 4 - Clica em Continue
 5 - Import
-
+```
 **Requisitos para fazer a request**
-
+```
 1 - Em authorization >> type: Escoolher a opção "Basic Auth"
 2 - Inserir o login: admin e senha: admin
 3 - Clicar em Send
-'''
+```
