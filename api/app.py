@@ -31,7 +31,7 @@ def listar():
 
         return jsonify(normalized_details)
     
-    except ValueError or SyntaxError:
+    except ValueError:
         return jsonify({
                     "error": {
                     "reason": "Filtro inválido ou valor do filtro não numérico.",
